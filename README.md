@@ -1,4 +1,208 @@
 # 📰 Tech News Aggregator
+LAN-> EN
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/Rikanymore/tech-news-aggregator)
+![GitHub repo size](https://img.shields.io/github/repo-size/Rikanymore/tech-news-aggregator)
+
+A Python application that automatically collects tech news from multiple sources. Scrapes popular platforms like Hacker News, TechCrunch, and The Verge, stores in SQLite database, and serves via Flask web interface.
+
+## ✨ Key Features
+- Automated scraping from **3+ news sources**
+- **SQLite** database integration
+- Modern **Flask** web interface
+- Daily auto-updates via **GitHub Actions**
+- **Markdown report** generation
+
+## 🚀 Quick Setup
+
+### Prerequisites
+- Python 3.10 or higher
+- Git (optional)
+
+```bash
+# 1. Clone repo (or download)
+git clone https://github.com/Rikanymore/tech-news-aggregator.git
+cd tech-news-aggregator
+
+# 2. Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate    # Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Initialize database and fetch news
+python scraper/news_scraper.py
+
+# 5. Launch web interface
+python run.py
+Open http://localhost:5000 in your browser
+
+📂 Project Structure
+text
+tech-news-aggregator/
+├── app/                  # Flask web interface
+│   ├── templates/        # HTML templates
+│   └── routes.py         # URL routing
+├── database/             # Database operations
+│   ├── models.py         # Database models
+│   └── db.py             # DB operations
+├── scraper/              # News scraping module
+│   ├── config.py         # Site configurations
+│   └── news_scraper.py   # Core scraping logic
+├── config.py             # Flask settings
+├── requirements.txt      # Python dependencies
+└── run.py                # Application entry point
+🔧 Configuration
+Customize news sources in scraper/config.py:
+
+python
+SITES = {
+    "Hacker News": {
+        "url": "https://news.ycombinator.com",
+        "selectors": {
+            "container": "tr.athing",
+            "title": "a.titlelink",
+            "link": "a.titlelink"
+        }
+    },
+    # Add new sources using this format
+}
+🤖 Auto-Update
+Project automatically updates news daily (.github/workflows/scrape.yml):
+
+yaml
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Daily at 08:00 UTC
+📸 Screenshots
+Web Interface	Terminal Output
+https://via.placeholder.com/400x250?text=Flask+Web+Interface	https://via.placeholder.com/400x250?text=Scraper+Output
+🙋 FAQ
+Q: How to add new news source?
+A: Add new site configuration in scraper/config.py
+
+Q: Where is the database located?
+A: Created as news.db in project root directory
+
+👥 Contributing
+Fork the repository
+
+Create new branch (git checkout -b feature/my-feature)
+
+Commit your changes (git commit -am 'Add some feature')
+
+Push to branch (git push origin feature/my-feature)
+
+Create Pull Request
+
+📜 License
+MIT License - See LICENSE file for details
+
+# 📰 Tech News Aggregator
+
+![Python](https://img.shields.io/badge/python-3.10+-blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/Rikanymore/tech-news-aggregator)
+![GitHub repo size](https://img.shields.io/github/repo-size/Rikanymore/tech-news-aggregator)
+
+A Python application that automatically collects tech news from multiple sources. Scrapes popular platforms like Hacker News, TechCrunch, and The Verge, stores in SQLite database, and serves via Flask web interface.
+
+## ✨ Key Features
+- Automated scraping from **3+ news sources**
+- **SQLite** database integration
+- Modern **Flask** web interface
+- Daily auto-updates via **GitHub Actions**
+- **Markdown report** generation
+
+## 🚀 Quick Setup
+
+### Prerequisites
+- Python 3.10 or higher
+- Git (optional)
+
+```bash
+# 1. Clone repo (or download)
+git clone https://github.com/Rikanymore/tech-news-aggregator.git
+cd tech-news-aggregator
+
+# 2. Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate    # Windows
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Initialize database and fetch news
+python scraper/news_scraper.py
+
+# 5. Launch web interface
+python run.py
+Open http://localhost:5000 in your browser
+
+📂 Project Structure
+text
+tech-news-aggregator/
+├── app/                  # Flask web interface
+│   ├── templates/        # HTML templates
+│   └── routes.py         # URL routing
+├── database/             # Database operations
+│   ├── models.py         # Database models
+│   └── db.py             # DB operations
+├── scraper/              # News scraping module
+│   ├── config.py         # Site configurations
+│   └── news_scraper.py   # Core scraping logic
+├── config.py             # Flask settings
+├── requirements.txt      # Python dependencies
+└── run.py                # Application entry point
+🔧 Configuration
+Customize news sources in scraper/config.py:
+
+python
+SITES = {
+    "Hacker News": {
+        "url": "https://news.ycombinator.com",
+        "selectors": {
+            "container": "tr.athing",
+            "title": "a.titlelink",
+            "link": "a.titlelink"
+        }
+    },
+    # Add new sources using this format
+}
+🤖 Auto-Update
+Project automatically updates news daily (.github/workflows/scrape.yml):
+
+yaml
+on:
+  schedule:
+    - cron: '0 8 * * *'  # Daily at 08:00 UTC
+📸 Screenshots
+Web Interface	Terminal Output
+https://via.placeholder.com/400x250?text=Flask+Web+Interface	https://via.placeholder.com/400x250?text=Scraper+Output
+🙋 FAQ
+Q: How to add new news source?
+A: Add new site configuration in scraper/config.py
+
+Q: Where is the database located?
+A: Created as news.db in project root directory
+
+👥 Contributing
+Fork the repository
+
+Create new branch (git checkout -b feature/my-feature)
+
+Commit your changes (git commit -am 'Add some feature')
+
+Push to branch (git push origin feature/my-feature)
+
+Create Pull Request
+
+
+LAN -> TR
+
+# 📰 Tech News Aggregator
 
 ![Python](https://img.shields.io/badge/python-3.10+-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Rikanymore/tech-news-aggregator)
@@ -37,10 +241,9 @@ python scraper/news_scraper.py
 
 # 5. Web arayüzünü başlat
 python run.py
-
 Tarayıcınızda http://localhost:5000 adresini açın
 
-Proje Yapısı
+📂 Proje Yapısı
 text
 tech-news-aggregator/
 ├── app/                  # Flask web arayüzü
@@ -55,8 +258,7 @@ tech-news-aggregator/
 ├── config.py             # Flask ayarları
 ├── requirements.txt      # Python bağımlılıkları
 └── run.py                # Uygulama giriş noktası
-
- Yapılandırma
+🔧 Yapılandırma
 Haber kaynaklarını özelleştirmek için scraper/config.py dosyasını düzenleyin:
 
 python
@@ -71,8 +273,7 @@ SITES = {
     },
     # Yeni kaynak eklemek için bu formatta ekleyin
 }
-
-Otomatik Güncelleme
+🤖 Otomatik Güncelleme
 Proje her gün otomatik olarak haberleri günceller (.github/workflows/scrape.yml):
 
 yaml
